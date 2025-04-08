@@ -38,7 +38,7 @@ async function uploadFileToSpaces(key, body, format) {
 export async function fetchData() {
   try {
     const response = await fetch(
-      `${process.env.REACT_APP_BUCKET_DATA_URL}/karasuno-nest/board.json`
+      `https://bucket4me.nyc3.cdn.digitaloceanspaces.com/karasuno-nest/board.json`
     );
 
     if (!response.ok) {
