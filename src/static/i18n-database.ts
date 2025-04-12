@@ -4,12 +4,21 @@ const i18n: I18n.Modules = {
   [Languages.PT_BT]: {
     [Screens.HOME]: {
       backBtn: "Voltar",
+      teamTitle: "Time",
+      addPlayerBtn: "Adicionar",
+      sorteBtn: "Sortear",
+      clearBtn: "Limpar",
+      removePlayerBtn: "Remover",
+      addLabel: "Adicionado",
     },
     [Screens.BOARD]: {
       example: "example",
     },
     [Screens.PLAYERS]: {
-      example: "example",
+      addPlayeryBtn: "Adicionar Jogador",
+      removePlayerBtn: "Remover",
+      inputPlaceholder: "Nome do Jogador",
+      noPlayers: "Nenhum jogador cadastrado",
     },
     [Screens.SETTINGS]: {
       version: "Versão do App",
@@ -24,12 +33,21 @@ const i18n: I18n.Modules = {
   [Languages.EN]: {
     [Screens.HOME]: {
       backBtn: "Voltar",
+      teamTitle: "Team",
+      addPlayerBtn: "Add",
+      sorteBtn: "Sort",
+      clearBtn: "Clear",
+      removePlayerBtn: "Remove",
+      addLabel: "Added",
     },
     [Screens.BOARD]: {
       example: "example",
     },
     [Screens.PLAYERS]: {
-      example: "example",
+      addPlayeryBtn: "Add Player",
+      removePlayerBtn: "Remove",
+      inputPlaceholder: "Player's Name",
+      noPlayers: "No players registered",
     },
     [Screens.SETTINGS]: {
       version: "App Version",

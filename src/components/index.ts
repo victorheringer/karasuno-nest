@@ -11,3 +11,5 @@ export { default as Float } from "components/float";
 export { default as Banner } from "components/banner";
 export { default as DebounceInputText } from "components/debounce-input-text";
 export { default as SolidButton } from "components/solid-button";
+export { default as Wrapper } from "components/wrapper";
+export { default as TextBox } from "components/text-box";

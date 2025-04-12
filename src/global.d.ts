@@ -19,6 +19,11 @@ declare global {
     solidBtnBgColor: string;
     solidBtnBorder: string;
     solidBtnFontColor: string;
+    mutedFontColor: string;
+    boxBackgroundColor: string;
+    boxBorderColor: string;
+    boxFontColor: string;
+    inputBackgroundColor: string;
   };
 
   export type ThemeOptions = {
@@ -53,6 +58,12 @@ declare global {
 
     export type HomeScreen = {
       backBtn: string;
+      teamTitle: string;
+      addPlayerBtn: string;
+      sorteBtn: string;
+      clearBtn: string;
+      removePlayerBtn: string;
+      addLabel: string;
     };
 
     export type SettingsScreen = {
@@ -65,7 +76,12 @@ declare global {
 
     export type BoardScreen = {};
 
-    export type PlayersScreen = {};
+    export type PlayersScreen = {
+      addPlayeryBtn: string;
+      removePlayerBtn: string;
+      inputPlaceholder: string;
+      noPlayers: string;
+    };
 
     export type SharedScreen = {};
 

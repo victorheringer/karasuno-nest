@@ -6,6 +6,8 @@ const InputText = styled.input`
   border: 1px solid ${(props) => props.theme.borderInputColor};
   width: 100%;
   box-sizing: border-box;
+  background-color: ${(props) => props.theme.inputBackgroundColor};
+  color: ${(props) => props.theme.mainFontColor};
 `;
 
 export default InputText;

@@ -8,9 +8,16 @@ const themes: ThemeOptions = {
     // Text Color
     mainFontColor: "#424242",
     menuIconsColor: "#000249",
+    mutedFontColor: "#757575",
 
     // Inputs
     separatorColor: "#e3e3e3",
+    inputBackgroundColor: "#ffffff",
+
+    //Wrapper
+    boxBackgroundColor: "#ffffff",
+    boxBorderColor: "#e3e3e3",
+    boxFontColor: "#CCCCCC",
 
     // Misc colors
     primaryColor: "#DD1717",
@@ -38,7 +45,15 @@ const themes: ThemeOptions = {
     errorColor: "#FF1744",
     successColor: "#50fa7b",
 
+    //Wrapper
+    boxBackgroundColor: "#212121",
+    boxBorderColor: "#35364a",
+    boxFontColor: "#757575",
+
+    inputBackgroundColor: "#444444",
+
     primaryColor: "#ef863d",
+    mutedFontColor: "#757575",
 
     menuIconsColor: "#f3f0ee",
     fontFamily: "Arial, sans-serif",

@@ -32,7 +32,7 @@ export default function Editor() {
   }
 
   function toggleKeys() {
-    inputType == "password" ? setInputType("text") : setInputType("password");
+    inputType === "password" ? setInputType("text") : setInputType("password");
   }
 
   console.log(boardList);

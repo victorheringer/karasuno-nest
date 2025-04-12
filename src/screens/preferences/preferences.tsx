@@ -50,16 +50,18 @@ export default function Preferences() {
             />
           </Float>
         </ListItem>
-        <ListItem>
-          <label>{text.editor}</label>
-          <Float>
-            <NavLink aria-label="Board" to={Screens.EDITOR}>
-              <SolidButton block={false} onClick={() => {}}>
-                Acessar
-              </SolidButton>
-            </NavLink>
-          </Float>
-        </ListItem>
+        {/* 
+          <ListItem>
+            <label>{text.editor}</label>
+            <Float>
+              <NavLink aria-label="Board" to={Screens.EDITOR}>
+                <SolidButton block={false} onClick={() => {}}>
+                  Acessar
+                </SolidButton>
+              </NavLink>
+            </Float>
+          </ListItem>
+          */}
       </List>
     </>
   );

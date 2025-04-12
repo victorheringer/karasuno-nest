@@ -2,6 +2,14 @@ import { useState } from "react";
 import * as Styled from "./styled";
 import { useStorage } from "hooks";
 import { Screens } from "enums";
+import {
+  List,
+  ListItem,
+  Float,
+  SolidButton,
+  Wrapper,
+  ListTitle,
+} from "components";
 
 function generateTeams(jogadores: Player[]): [Player[], Player[]] {
   const shuffle = [...jogadores].sort(() => Math.random() - 0.5);
@@ -19,59 +27,95 @@ const DEFAULT_TEAMS = {
 };
 
 export default function Home() {
-  const { players } = useStorage(Screens.HOME);
+  const { players, i18n } = useStorage(Screens.HOME);
   const [teams, setTeams] = useState<{ teamA: Player[]; teamB: Player[] }>(
     DEFAULT_TEAMS
   );
+
+  const text: I18n.HomeScreen = i18n as I18n.HomeScreen;
   const [availablePlayers, setAvailablePlayer] = useState<string[]>([]);
 
   return (
     <Styled.Container>
-      <h1>Home</h1>
-
-      <h3>Time 1</h3>
-
-      {teams.teamA.map(({ name }) => (
-        <p>{name}</p>
-      ))}
-
-      <h3>Time 2</h3>
-      {teams.teamB.map(({ name }) => (
-        <p>{name}</p>
-      ))}
-
-      <button
-        onClick={() => {
-          const [teamA, teamB] = generateTeams(
-            players.filter((p) => availablePlayers.includes(p.id))
-          );
-
-          setTeams({ teamA, teamB });
-          setAvailablePlayer([]);
-        }}
-      >
-        Sort
-      </button>
-      <button
-        onClick={() => {
-          setTeams(DEFAULT_TEAMS);
-        }}
-      >
-        Clean
-      </button>
-      <hr />
-      {players?.map((player) => (
+      {teams.teamA.length > 0 && (
         <>
-          <p>{player.name}</p>
-          {availablePlayers.includes(player.id) && <p>adicionado</p>}
-          <button
-            onClick={() => setAvailablePlayer((prev) => [...prev, player.id])}
-            disabled={availablePlayers.includes(player.id)}
-          >
-            add
-          </button>
+          <ListTitle>{text.teamTitle} 1</ListTitle>
+          <List>
+            {teams.teamA.map(({ name }) => (
+              <>
+                <ListItem>
+                  <label>{name}</label>
+                </ListItem>
+              </>
+            ))}
+          </List>
         </>
-      ))}
+      )}
+
+      {teams.teamB.length > 0 && (
+        <>
+          <ListTitle>{text.teamTitle} 2</ListTitle>
+          <List>
+            {teams.teamB.map(({ name }) => (
+              <>
+                <ListItem>
+                  <label>{name}</label>
+                </ListItem>
+              </>
+            ))}
+          </List>
+        </>
+      )}
+
+      <Wrapper mt={20}>
+        <Wrapper inline mr={10}>
+          <SolidButton
+            block={false}
+            onClick={() => {
+              const [teamA, teamB] = generateTeams(
+                players.filter((p) => availablePlayers.includes(p.id))
+              );
+              setTeams({ teamA, teamB });
+              setAvailablePlayer([]);
+            }}
+          >
+            {text.sorteBtn}
+          </SolidButton>
+        </Wrapper>
+        <SolidButton
+          block={false}
+          onClick={() => {
+            setTeams(DEFAULT_TEAMS);
+            setAvailablePlayer([]);
+          }}
+        >
+          {text.clearBtn}
+        </SolidButton>
+      </Wrapper>
+
+      <List>
+        {players?.map((player) => (
+          <>
+            <ListItem>
+              <label>
+                {player.name}
+                {availablePlayers.includes(player.id) && ` - ${text.addLabel}`}
+              </label>
+              <Float>
+                <SolidButton
+                  block={false}
+                  onClick={() =>
+                    setAvailablePlayer((prev) => [...prev, player.id])
+                  }
+                  disabled={availablePlayers.includes(player.id)}
+                >
+                  {text.addPlayerBtn}
+                </SolidButton>
+              </Float>
+            </ListItem>
+          </>
+        ))}
+      </List>
     </Styled.Container>
   );
 }
