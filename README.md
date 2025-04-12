@@ -54,19 +54,3 @@ cd karasuno-nest
 ```
 npm install && npm start
 ```
-
-### Backend API
-
-The backend uses Node.js and Express. Follow these steps to set it up:
-
-```
-git clone https://github.com/victorheringer/karasuno-nest-api.git
-```
-
-```
-cd karasuno-nest-api
-```
-
-```
-npm install && npm start
-```
