@@ -24,6 +24,7 @@ import {
   faSpinner,
   faVolleyball,
   faRectangleList,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { StorageService } from "services";
 import { preferences } from "static";
@@ -48,6 +49,7 @@ library.add(faUsers);
 library.add(faSpinner);
 library.add(faVolleyball);
 library.add(faRectangleList);
+library.add(faStar);
 
 StorageService.setup({
   id: generateId(),

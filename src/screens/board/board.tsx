@@ -1,15 +1,13 @@
 import { useStorage } from "hooks";
 import { Screens } from "enums";
 
-import { useBucket } from "hooks";
+import board from "../../data/board.json";
 
 import * as Styled from "./styled";
 
 export default function Lobby() {
   const { storage, i18n } = useStorage(Screens.BOARD);
   const text = i18n as I18n.BoardScreen;
-
-  const { board } = useBucket();
 
   return (
     <Styled.BoardContainer>

@@ -87,6 +87,10 @@ declare global {
 
     export type EditorScreen = {};
 
+    export type AchievementsScreen = {
+      searchPlayerPlaceholder: string;
+    };
+
     export type Screens = {
       [Screens.HOME]: HomeScreen;
       [Screens.SETTINGS]: SettingsScreen;
@@ -94,6 +98,7 @@ declare global {
       [Screens.PLAYERS]: PlayersScreen;
       [Screens.SHARED]: SharedScreen;
       [Screens.EDITOR]: EditorScreen;
+      [Screens.ACHIEVEMENTS]: AchievementsScreen;
     };
   }
 

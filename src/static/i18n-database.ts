@@ -29,6 +29,9 @@ const i18n: I18n.Modules = {
     },
     [Screens.SHARED]: {},
     [Screens.EDITOR]: {},
+    [Screens.ACHIEVEMENTS]: {
+      searchPlayerPlaceholder: "Pesquisar jogador",
+    },
   },
   [Languages.EN]: {
     [Screens.HOME]: {
@@ -58,6 +61,9 @@ const i18n: I18n.Modules = {
     },
     [Screens.SHARED]: {},
     [Screens.EDITOR]: {},
+    [Screens.ACHIEVEMENTS]: {
+      searchPlayerPlaceholder: "Search player",
+    },
   },
 };
 

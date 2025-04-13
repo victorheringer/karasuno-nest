@@ -39,16 +39,6 @@ const StyledLink = styled(NavLink)`
   position: relative;
 `;
 
-const Dot = styled.div`
-  width: 8px;
-  height: 8px;
-  background-color: ${(props) => props.theme.successColor};
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  border-radius: 50%;
-`;
-
 export default function Navbar({ theme }: { theme: Theme }) {
   const { primaryColor } = theme;
   const active = { color: primaryColor };
@@ -77,6 +67,15 @@ export default function Navbar({ theme }: { theme: Theme }) {
             to={Screens.BOARD}
           >
             <FontAwesomeIcon icon="rectangle-list" />
+          </StyledLink>
+        </ListItem>
+        <ListItem>
+          <StyledLink
+            aria-label="Achievements"
+            activeStyle={active}
+            to={Screens.ACHIEVEMENTS}
+          >
+            <FontAwesomeIcon icon="star" />
           </StyledLink>
         </ListItem>
         <ListItem>

@@ -13,6 +13,7 @@ const Preferences = lazy(() => import("./screens/preferences"));
 const Board = lazy(() => import("./screens/board"));
 const Players = lazy(() => import("./screens/players"));
 const Editor = lazy(() => import("./screens/editor"));
+const Achievements = lazy(() => import("./screens/achievements"));
 
 type RoutesProps = {
   theme: Theme;
@@ -36,6 +37,10 @@ export default function Routes({ theme, initial, text }: RoutesProps) {
               <Route path={`/${Screens.SETTINGS}`} component={Preferences} />
               <Route path={`/${Screens.BOARD}`} component={Board} />
               <Route path={`/${Screens.EDITOR}`} component={Editor} />
+              <Route
+                path={`/${Screens.ACHIEVEMENTS}`}
+                component={Achievements}
+              />
             </Switch>
           </Suspense>
         </Page>

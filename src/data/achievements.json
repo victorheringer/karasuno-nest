@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Solo Leveling",
+    "description": "Ganhar uma partida sozinho com todos os pontos de saque",
+    "players": []
+  },
+  {
+    "title": "Contribuidor",
+    "description": "Ajudou a melhorar o app de alguma maneira",
+    "players": [{ "name": "Victor", "date": "17/03/2025" }]
+  }
+]

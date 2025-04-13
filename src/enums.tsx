@@ -17,6 +17,7 @@ export enum Screens {
   PLAYERS = "players",
   SHARED = "shared",
   EDITOR = "editor",
+  ACHIEVEMENTS = "achievements",
 }
 
 export enum Themes {
