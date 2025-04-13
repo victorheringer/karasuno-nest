@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/karasuno-nest/static/js/main.510443fe.js",
+    "main.js": "/karasuno-nest/static/js/main.c49e50ea.js",
     "static/js/377.7dfcaa20.chunk.js": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js",
     "service-worker.js": "/karasuno-nest/service-worker.js",
     "index.html": "/karasuno-nest/index.html",
-    "main.510443fe.js.map": "/karasuno-nest/static/js/main.510443fe.js.map",
+    "main.c49e50ea.js.map": "/karasuno-nest/static/js/main.c49e50ea.js.map",
     "377.7dfcaa20.chunk.js.map": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.510443fe.js"
+    "static/js/main.c49e50ea.js"
   ]
 }
