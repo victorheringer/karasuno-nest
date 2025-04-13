@@ -1,0 +1,10 @@
+[
+  {
+    "title": "First Steps",
+    "description": "Completed the first tutorial.",
+    "players": [
+      { "name": "Alice", "date": "2023-01-15" },
+      { "name": "Bob", "date": "2023-01-16" }
+    ]
+  }
+]
