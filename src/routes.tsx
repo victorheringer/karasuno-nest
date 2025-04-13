@@ -23,7 +23,7 @@ type RoutesProps = {
 export default function Routes({ theme, initial, text }: RoutesProps) {
   return (
     <Container>
-      <Router>
+      <Router basename="/karasuno-nest">
         <Navbar theme={theme} />
         <Page>
           <Suspense fallback={<div>Loading...</div>}>
