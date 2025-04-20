@@ -9,6 +9,7 @@ import {
   SolidButton,
   Wrapper,
   ListTitle,
+  TextBox,
 } from "components";
 
 function generateTeams(jogadores: Player[]): [Player[], Player[]] {
@@ -68,29 +69,35 @@ export default function Home() {
       )}
 
       <Wrapper mt={20}>
+        {!players?.length && <TextBox text={text.noPlayers} />}
+
         <Wrapper inline mr={10}>
+          {!!players?.length && (
+            <SolidButton
+              block={false}
+              onClick={() => {
+                const [teamA, teamB] = generateTeams(
+                  players.filter((p) => availablePlayers.includes(p.id))
+                );
+                setTeams({ teamA, teamB });
+                setAvailablePlayer([]);
+              }}
+            >
+              {text.sortBtn}
+            </SolidButton>
+          )}
+        </Wrapper>
+        {!!players?.length && (
           <SolidButton
             block={false}
             onClick={() => {
-              const [teamA, teamB] = generateTeams(
-                players.filter((p) => availablePlayers.includes(p.id))
-              );
-              setTeams({ teamA, teamB });
+              setTeams(DEFAULT_TEAMS);
               setAvailablePlayer([]);
             }}
           >
-            {text.sorteBtn}
+            {text.clearBtn}
           </SolidButton>
-        </Wrapper>
-        <SolidButton
-          block={false}
-          onClick={() => {
-            setTeams(DEFAULT_TEAMS);
-            setAvailablePlayer([]);
-          }}
-        >
-          {text.clearBtn}
-        </SolidButton>
+        )}
       </Wrapper>
 
       <List>

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/karasuno-nest/static/js/main.5e4cfbf1.js",
+    "main.js": "/karasuno-nest/static/js/main.d69c1d9e.js",
     "static/js/297.9e345c34.chunk.js": "/karasuno-nest/static/js/297.9e345c34.chunk.js",
     "static/js/377.7dfcaa20.chunk.js": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js",
     "service-worker.js": "/karasuno-nest/service-worker.js",
     "index.html": "/karasuno-nest/index.html",
-    "main.5e4cfbf1.js.map": "/karasuno-nest/static/js/main.5e4cfbf1.js.map",
+    "main.d69c1d9e.js.map": "/karasuno-nest/static/js/main.d69c1d9e.js.map",
     "297.9e345c34.chunk.js.map": "/karasuno-nest/static/js/297.9e345c34.chunk.js.map",
     "377.7dfcaa20.chunk.js.map": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5e4cfbf1.js"
+    "static/js/main.d69c1d9e.js"
   ]
 }

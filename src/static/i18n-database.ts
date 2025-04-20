@@ -6,10 +6,12 @@ const i18n: I18n.Modules = {
       backBtn: "Voltar",
       teamTitle: "Time",
       addPlayerBtn: "Adicionar",
-      sorteBtn: "Sortear",
+      sortBtn: "Sortear",
       clearBtn: "Limpar",
       removePlayerBtn: "Remover",
       addLabel: "Adicionado",
+      noPlayers:
+        "Nenhum jogador cadastrado, registre jogadores antes de sortear os times",
     },
     [Screens.BOARD]: {
       example: "example",
@@ -38,10 +40,11 @@ const i18n: I18n.Modules = {
       backBtn: "Voltar",
       teamTitle: "Team",
       addPlayerBtn: "Add",
-      sorteBtn: "Sort",
+      sortBtn: "Sort",
       clearBtn: "Clear",
       removePlayerBtn: "Remove",
       addLabel: "Added",
+      noPlayers: "No players registered, register players before sort teams",
     },
     [Screens.BOARD]: {
       example: "example",

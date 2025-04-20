@@ -60,10 +60,11 @@ declare global {
       backBtn: string;
       teamTitle: string;
       addPlayerBtn: string;
-      sorteBtn: string;
+      sortBtn: string;
       clearBtn: string;
       removePlayerBtn: string;
       addLabel: string;
+      noPlayers: string;
     };
 
     export type SettingsScreen = {
