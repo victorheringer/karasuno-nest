@@ -1,7 +1,5 @@
-import { NavLink } from "react-router-dom";
-
 import { useStorage } from "hooks";
-import { Select, List, ListItem, Float, SolidButton } from "components";
+import { Select, List, ListItem, Float, PageContainer } from "components";
 import { Languages, Screens, Themes } from "enums";
 
 export default function Preferences() {
@@ -20,7 +18,7 @@ export default function Preferences() {
   };
 
   return (
-    <>
+    <PageContainer>
       <List>
         <ListItem>
           <label>
@@ -50,19 +48,7 @@ export default function Preferences() {
             />
           </Float>
         </ListItem>
-        {/* 
-          <ListItem>
-            <label>{text.editor}</label>
-            <Float>
-              <NavLink aria-label="Board" to={Screens.EDITOR}>
-                <SolidButton block={false} onClick={() => {}}>
-                  Acessar
-                </SolidButton>
-              </NavLink>
-            </Float>
-          </ListItem>
-          */}
       </List>
-    </>
+    </PageContainer>
   );
 }

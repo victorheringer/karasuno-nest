@@ -16,7 +16,6 @@ export enum Screens {
   BOARD = "board",
   PLAYERS = "players",
   SHARED = "shared",
-  EDITOR = "editor",
   ACHIEVEMENTS = "achievements",
 }
 

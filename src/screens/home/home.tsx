@@ -1,5 +1,4 @@
 import { useState } from "react";
-import * as Styled from "./styled";
 import { useStorage } from "hooks";
 import { Screens } from "enums";
 import {
@@ -10,6 +9,7 @@ import {
   Wrapper,
   ListTitle,
   TextBox,
+  PageContainer,
 } from "components";
 
 function generateTeams(jogadores: Player[]): [Player[], Player[]] {
@@ -37,7 +37,7 @@ export default function Home() {
   const [availablePlayers, setAvailablePlayer] = useState<string[]>([]);
 
   return (
-    <Styled.Container>
+    <PageContainer>
       {teams.teamA.length > 0 && (
         <>
           <ListTitle>{text.teamTitle} 1</ListTitle>
@@ -68,7 +68,7 @@ export default function Home() {
         </>
       )}
 
-      <Wrapper mt={20}>
+      <Wrapper>
         {!players?.length && <TextBox text={text.noPlayers} />}
 
         <Wrapper inline mr={10}>
@@ -123,6 +123,6 @@ export default function Home() {
           </>
         ))}
       </List>
-    </Styled.Container>
+    </PageContainer>
   );
 }

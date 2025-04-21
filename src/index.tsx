@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { StorageService } from "services";
 import { preferences } from "static";
-import { generateId } from "helpers";
+import { generateId } from "./helpers";
 
 library.add(faEdit);
 library.add(faBoxOpen);

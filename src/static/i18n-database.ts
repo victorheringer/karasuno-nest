@@ -30,7 +30,6 @@ const i18n: I18n.Modules = {
       editor: "Editor",
     },
     [Screens.SHARED]: {},
-    [Screens.EDITOR]: {},
     [Screens.ACHIEVEMENTS]: {
       searchPlayerPlaceholder: "Pesquisar jogador",
     },
@@ -63,7 +62,6 @@ const i18n: I18n.Modules = {
       editor: "Editor",
     },
     [Screens.SHARED]: {},
-    [Screens.EDITOR]: {},
     [Screens.ACHIEVEMENTS]: {
       searchPlayerPlaceholder: "Search player",
     },

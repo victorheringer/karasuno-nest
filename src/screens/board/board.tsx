@@ -1,16 +1,18 @@
-import { useStorage } from "hooks";
-import { Screens } from "enums";
-
-import board from "../../data/board.json";
+import { useRemoteJson } from "hooks";
 
 import * as Styled from "./styled";
+import { PageContainer } from "components";
 
-export default function Lobby() {
-  const { storage, i18n } = useStorage(Screens.BOARD);
-  const text = i18n as I18n.BoardScreen;
+import type { RemoteBoardList } from "types";
+
+export default function Board() {
+  const [board] = useRemoteJson<RemoteBoardList>(
+    process.env.REACT_APP_BOARD_FILE_NAME,
+    []
+  );
 
   return (
-    <Styled.BoardContainer>
+    <PageContainer>
       {board?.map((item: any) => (
         <Styled.BoardNewsItemContainer key={item.title}>
           <Styled.BoardNewsTitle>{item.title}</Styled.BoardNewsTitle>
@@ -19,6 +21,6 @@ export default function Lobby() {
           </Styled.BoardNewsDescription>
         </Styled.BoardNewsItemContainer>
       ))}
-    </Styled.BoardContainer>
+    </PageContainer>
   );
 }

@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const BoardContainer = styled.div`
-  padding: 0 20px;
-`;
-
 export const BoardNewsItemContainer = styled.div`
   padding-bottom: 20px;
   border-bottom: 1px solid ${(props) => props.theme.separatorColor};

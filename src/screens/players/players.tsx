@@ -1,7 +1,7 @@
 import { useStorage } from "hooks";
 import { Screens } from "enums";
 import { useRef } from "react";
-import { generateId } from "helpers";
+import { generateId } from "../../helpers";
 import {
   InputText,
   SolidButton,
@@ -10,6 +10,7 @@ import {
   ListItem,
   Float,
   TextBox,
+  PageContainer,
 } from "components";
 
 export default function Players() {
@@ -19,7 +20,7 @@ export default function Players() {
   const text: I18n.PlayersScreen = i18n as I18n.PlayersScreen;
 
   return (
-    <Wrapper mt={20}>
+    <PageContainer>
       <InputText
         type="text"
         ref={inputRef}
@@ -62,6 +63,6 @@ export default function Players() {
         ))}
       </List>
       {!players?.length && <TextBox text={text.noPlayers} />}
-    </Wrapper>
+    </PageContainer>
   );
 }

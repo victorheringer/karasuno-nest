@@ -1,21 +1,14 @@
-import { useState, useEffect } from "react";
-import { useStorage } from "hooks";
+import { useState } from "react";
+import { useStorage, useRemoteJson } from "hooks";
 import { Screens } from "enums";
-import achievementsData from "../../data/achievements.json";
 
-import {
-  InputText,
-  SolidButton,
-  Wrapper,
-  List,
-  ListItem,
-  Float,
-  TextBox,
-} from "components";
+import { InputText, PageContainer } from "components";
 
 import * as Styled from "./styled";
 
-function searchPlayer(data: any, name: any) {
+import type { RemoteAchievementList } from "types";
+
+function searchPlayer(data: any, name: any): RemoteAchievementList {
   if (!name) {
     return data;
   }
@@ -30,23 +23,21 @@ function searchPlayer(data: any, name: any) {
 export default function Achievements() {
   const { i18n } = useStorage(Screens.ACHIEVEMENTS);
   const text = i18n as I18n.AchievementsScreen;
-  const [achievements, setAchievements] = useState(achievementsData);
   const [inputValue, setInputValue] = useState("");
-
-  useEffect(() => {
-    const filteredAchievements = searchPlayer(achievementsData, inputValue);
-    setAchievements(filteredAchievements);
-  }, [inputValue]);
+  const [achievementsData] = useRemoteJson<RemoteAchievementList>(
+    process.env.REACT_APP_ACHIEVIMENTS_FILE_NAME,
+    []
+  );
 
   return (
-    <Wrapper mt={20}>
+    <PageContainer>
       <InputText
         placeholder={text.searchPlayerPlaceholder}
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
       />
 
-      {achievements.map((achievement) => (
+      {searchPlayer(achievementsData, inputValue).map((achievement) => (
         <Styled.AchievementsItemContainer key={achievement.title}>
           <Styled.AchievementsTitle>
             {achievement.title}
@@ -72,6 +63,6 @@ export default function Achievements() {
           ))}
         </Styled.AchievementsItemContainer>
       ))}
-    </Wrapper>
+    </PageContainer>
   );
 }
