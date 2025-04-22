@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.js": "/karasuno-nest/static/js/main.f0ea539c.js",
+    "main.js": "/karasuno-nest/static/js/main.da135435.js",
     "static/js/102.59769a3f.chunk.js": "/karasuno-nest/static/js/102.59769a3f.chunk.js",
     "static/js/377.7dfcaa20.chunk.js": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js",
+    "static/media/haikyuu-wat.gif": "/karasuno-nest/static/media/haikyuu-wat.f4bc6dce727e2270b268.gif",
     "service-worker.js": "/karasuno-nest/service-worker.js",
     "index.html": "/karasuno-nest/index.html",
-    "main.f0ea539c.js.map": "/karasuno-nest/static/js/main.f0ea539c.js.map",
+    "main.da135435.js.map": "/karasuno-nest/static/js/main.da135435.js.map",
     "102.59769a3f.chunk.js.map": "/karasuno-nest/static/js/102.59769a3f.chunk.js.map",
     "377.7dfcaa20.chunk.js.map": "/karasuno-nest/static/js/377.7dfcaa20.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f0ea539c.js"
+    "static/js/main.da135435.js"
   ]
 }

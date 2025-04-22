@@ -1,10 +1,22 @@
 import { useStorage } from "hooks";
-import { Select, List, ListItem, Float, PageContainer } from "components";
+import {
+  Select,
+  List,
+  ListItem,
+  Float,
+  PageContainer,
+  Wrapper,
+} from "components";
 import { Languages, Screens, Themes } from "enums";
+import { useEffect, useState } from "react";
+
+import EasterImg from "../../assets/haikyuu-wat.gif";
 
 export default function Preferences() {
   const { storage, actions, i18n } = useStorage(Screens.SETTINGS);
   const text: I18n.SettingsScreen = i18n as I18n.SettingsScreen;
+  const [easter, setEaster] = useState(0);
+  const [showEaster, setShowEaster] = useState(false);
 
   const settingsOptions = {
     languages: [
@@ -17,10 +29,32 @@ export default function Preferences() {
     ],
   };
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (easter == 10 && storage.preferences.theme === Themes.HAIKYUU) {
+      console.log(easter);
+      setShowEaster(true);
+      timer = setTimeout(() => {
+        setShowEaster(false);
+        setEaster(0);
+      }, 3830);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [easter, storage]);
+
+  useEffect(() => {
+    setShowEaster(false);
+    setEaster(0);
+  }, [storage.preferences.theme]);
+
   return (
     <PageContainer>
       <List>
-        <ListItem>
+        <ListItem onClick={() => easter < 10 && setEaster(easter + 1)}>
           <label>
             {text.version}
             <span style={{ float: "right" }}>
@@ -49,6 +83,9 @@ export default function Preferences() {
           </Float>
         </ListItem>
       </List>
+      <Wrapper mt={10}>
+        {showEaster && <img style={{ width: "100%" }} src={EasterImg} />}
+      </Wrapper>
     </PageContainer>
   );
 }
